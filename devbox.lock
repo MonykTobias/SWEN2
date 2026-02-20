@@ -1,0 +1,258 @@
+{
+  "lockfile_version": "1",
+  "packages": {
+    "binutils@latest": {
+      "last_modified": "2026-01-23T17:20:52Z",
+      "resolved": "github:NixOS/nixpkgs/a1bab9e494f5f4939442a57a58d0449a109593fe#binutils",
+      "source": "devbox-search",
+      "version": "2.44",
+      "systems": {
+        "aarch64-darwin": {
+          "outputs": [
+            {
+              "name": "out",
+              "path": "/nix/store/wcj36awzh5ypiflkkggmmxp55xvc1zw3-binutils-wrapper-2.44",
+              "default": true
+            },
+            {
+              "name": "man",
+              "path": "/nix/store/7dn5zfypnvc2wad64i219c9s27y57say-binutils-wrapper-2.44-man",
+              "default": true
+            },
+            {
+              "name": "info",
+              "path": "/nix/store/2l27ywy11839n1jpyg12f8hxhcvanmbb-binutils-wrapper-2.44-info"
+            }
+          ],
+          "store_path": "/nix/store/wcj36awzh5ypiflkkggmmxp55xvc1zw3-binutils-wrapper-2.44"
+        },
+        "aarch64-linux": {
+          "outputs": [
+            {
+              "name": "out",
+              "path": "/nix/store/mnqi9bzf4f0d7say6zw9viasvpfy6ar6-binutils-wrapper-2.44",
+              "default": true
+            },
+            {
+              "name": "man",
+              "path": "/nix/store/6lfh0cnbwkn2mi5bxjfc47j0f4py8dpi-binutils-wrapper-2.44-man",
+              "default": true
+            },
+            {
+              "name": "info",
+              "path": "/nix/store/v208d8manb59fhfvb3f8r05bx86d8zy0-binutils-wrapper-2.44-info"
+            }
+          ],
+          "store_path": "/nix/store/mnqi9bzf4f0d7say6zw9viasvpfy6ar6-binutils-wrapper-2.44"
+        },
+        "x86_64-darwin": {
+          "outputs": [
+            {
+              "name": "out",
+              "path": "/nix/store/1zfsp85padmid8rq5pk37xxnykzxls7h-binutils-wrapper-2.44",
+              "default": true
+            },
+            {
+              "name": "man",
+              "path": "/nix/store/0f7vyj61w7vcmpsiaadk20zcsdf6r0jc-binutils-wrapper-2.44-man",
+              "default": true
+            },
+            {
+              "name": "info",
+              "path": "/nix/store/3dw741w6iyrmczfgvh4j40pfibq86c9p-binutils-wrapper-2.44-info"
+            }
+          ],
+          "store_path": "/nix/store/1zfsp85padmid8rq5pk37xxnykzxls7h-binutils-wrapper-2.44"
+        },
+        "x86_64-linux": {
+          "outputs": [
+            {
+              "name": "out",
+              "path": "/nix/store/i6ppbrlpp6yki8qvka7nyv091xa8dchx-binutils-wrapper-2.44",
+              "default": true
+            },
+            {
+              "name": "man",
+              "path": "/nix/store/7j80m505ppyjjgpqyn2fagp5rnq7zfk1-binutils-wrapper-2.44-man",
+              "default": true
+            },
+            {
+              "name": "info",
+              "path": "/nix/store/6j7gnkgljyicadwk991x1nvya33z112f-binutils-wrapper-2.44-info"
+            }
+          ],
+          "store_path": "/nix/store/i6ppbrlpp6yki8qvka7nyv091xa8dchx-binutils-wrapper-2.44"
+        }
+      }
+    },
+    "github:NixOS/nixpkgs/nixpkgs-unstable": {
+      "last_modified": "2026-02-16T02:09:13Z",
+      "resolved": "github:NixOS/nixpkgs/d1c15b7d5806069da59e819999d70e1cec0760bf?lastModified=1771207753&narHash=sha256-b9uG8yN50DRQ6A7JdZBfzq718ryYrlmGgqkRm9OOwCE%3D"
+    },
+    "jdk@21": {
+      "last_modified": "2025-10-22T20:59:19Z",
+      "resolved": "github:NixOS/nixpkgs/01b6809f7f9d1183a2b3e081f0a1e6f8f415cb09#jdk",
+      "source": "devbox-search",
+      "version": "21.0.9+8",
+      "systems": {
+        "aarch64-linux": {
+          "outputs": [
+            {
+              "name": "out",
+              "path": "/nix/store/gxjm3qjq9kyvi5hv7r4s8ngbkg1d94df-openjdk-21.0.9+8",
+              "default": true
+            },
+            {
+              "name": "debug",
+              "path": "/nix/store/sz9izpfkgi9nw3s9fz8vik9qn01vkx4d-openjdk-21.0.9+8-debug"
+            }
+          ],
+          "store_path": "/nix/store/gxjm3qjq9kyvi5hv7r4s8ngbkg1d94df-openjdk-21.0.9+8"
+        },
+        "x86_64-linux": {
+          "outputs": [
+            {
+              "name": "out",
+              "path": "/nix/store/l5z1hqq6l223379w6f25fibniz16g2s9-openjdk-21.0.9+8",
+              "default": true
+            },
+            {
+              "name": "debug",
+              "path": "/nix/store/pgkj2381fcdrbx9w85h162cigdgyn7j2-openjdk-21.0.9+8-debug"
+            }
+          ],
+          "store_path": "/nix/store/l5z1hqq6l223379w6f25fibniz16g2s9-openjdk-21.0.9+8"
+        }
+      }
+    },
+    "maven@latest": {
+      "last_modified": "2026-01-23T17:20:52Z",
+      "resolved": "github:NixOS/nixpkgs/a1bab9e494f5f4939442a57a58d0449a109593fe#maven",
+      "source": "devbox-search",
+      "version": "3.9.12",
+      "systems": {
+        "aarch64-darwin": {
+          "outputs": [
+            {
+              "name": "out",
+              "path": "/nix/store/k9sgk3q1306si2jz1xfl9apd1v1r6md8-maven-3.9.12",
+              "default": true
+            }
+          ],
+          "store_path": "/nix/store/k9sgk3q1306si2jz1xfl9apd1v1r6md8-maven-3.9.12"
+        },
+        "aarch64-linux": {
+          "outputs": [
+            {
+              "name": "out",
+              "path": "/nix/store/rv85ra1bqqy2zq99a1x06ri24rwzpb8j-maven-3.9.12",
+              "default": true
+            }
+          ],
+          "store_path": "/nix/store/rv85ra1bqqy2zq99a1x06ri24rwzpb8j-maven-3.9.12"
+        },
+        "x86_64-darwin": {
+          "outputs": [
+            {
+              "name": "out",
+              "path": "/nix/store/a6wv4w68bsp3znbgqdnnxxkmhcba4d5h-maven-3.9.12",
+              "default": true
+            }
+          ],
+          "store_path": "/nix/store/a6wv4w68bsp3znbgqdnnxxkmhcba4d5h-maven-3.9.12"
+        },
+        "x86_64-linux": {
+          "outputs": [
+            {
+              "name": "out",
+              "path": "/nix/store/qfg0cblwp966vjrzqcyrzq5hjffifbvb-maven-3.9.12",
+              "default": true
+            }
+          ],
+          "store_path": "/nix/store/qfg0cblwp966vjrzqcyrzq5hjffifbvb-maven-3.9.12"
+        }
+      }
+    },
+    "nodejs@latest": {
+      "last_modified": "2026-02-15T17:45:47Z",
+      "plugin_version": "0.0.2",
+      "resolved": "github:NixOS/nixpkgs/ac055f38c798b0d87695240c7b761b82fc7e5bc2#nodejs_25",
+      "source": "devbox-search",
+      "version": "25.6.1",
+      "systems": {
+        "aarch64-darwin": {
+          "outputs": [
+            {
+              "name": "out",
+              "path": "/nix/store/vgk6ggp7fpcpmb2bd1cw8fa7y28dg61n-nodejs-25.6.1",
+              "default": true
+            },
+            {
+              "name": "dev",
+              "path": "/nix/store/46fvwwp6azfb8jsbgjljkqxwxii965iy-nodejs-25.6.1-dev"
+            },
+            {
+              "name": "libv8",
+              "path": "/nix/store/yzs2xnyb6ifm1klkmszv7kj52zgsxqaf-nodejs-25.6.1-libv8"
+            }
+          ],
+          "store_path": "/nix/store/vgk6ggp7fpcpmb2bd1cw8fa7y28dg61n-nodejs-25.6.1"
+        },
+        "aarch64-linux": {
+          "outputs": [
+            {
+              "name": "out",
+              "path": "/nix/store/20azlpkcakhg9qj3p3f4mx50wwmfpkmr-nodejs-25.6.1",
+              "default": true
+            },
+            {
+              "name": "dev",
+              "path": "/nix/store/1w3y5v72hwn4ab6bfwjf6jy7c3mfhsxm-nodejs-25.6.1-dev"
+            },
+            {
+              "name": "libv8",
+              "path": "/nix/store/rkypcfxqvks4fp62fy3idhn7sb65sxyc-nodejs-25.6.1-libv8"
+            }
+          ],
+          "store_path": "/nix/store/20azlpkcakhg9qj3p3f4mx50wwmfpkmr-nodejs-25.6.1"
+        },
+        "x86_64-darwin": {
+          "outputs": [
+            {
+              "name": "out",
+              "path": "/nix/store/j6q14s986fdwzbrjf5ysv7k44wqblh3k-nodejs-25.6.1",
+              "default": true
+            },
+            {
+              "name": "dev",
+              "path": "/nix/store/cfk24mvg8mpwdp2x94avyjplxv9vv1bm-nodejs-25.6.1-dev"
+            },
+            {
+              "name": "libv8",
+              "path": "/nix/store/4z338draskb9qpnb5w9vzfnilr7lkmg0-nodejs-25.6.1-libv8"
+            }
+          ],
+          "store_path": "/nix/store/j6q14s986fdwzbrjf5ysv7k44wqblh3k-nodejs-25.6.1"
+        },
+        "x86_64-linux": {
+          "outputs": [
+            {
+              "name": "out",
+              "path": "/nix/store/6p88z6kk9bkvy0kb994bsc3cri5dwy0w-nodejs-25.6.1",
+              "default": true
+            },
+            {
+              "name": "dev",
+              "path": "/nix/store/zg703v0kdlv7ngdirphhjvvbf3lndj4i-nodejs-25.6.1-dev"
+            },
+            {
+              "name": "libv8",
+              "path": "/nix/store/f4sdxxnkc208az6z8s6jw55xrhzw49wn-nodejs-25.6.1-libv8"
+            }
+          ],
+          "store_path": "/nix/store/6p88z6kk9bkvy0kb994bsc3cri5dwy0w-nodejs-25.6.1"
+        }
+      }
+    }
+  }
+}
