@@ -1,0 +1,27 @@
+name: Feature
+description: New Feature needed in the Project
+type: Feature
+assignees: []
+body:
+  - type: textarea
+    id: description
+    attributes:
+      label: Description
+      description: Explain the feature in as much detail as possible
+    validations:
+      required: true
+  - type: textarea
+    id: acceptance-criteria
+    attributes:
+      label: Acceptance Criteria
+      description: Explain what needs to be done to complete this feature
+  - type: textarea
+    id: dod
+    attributes:
+      label: Definition of Done
+      value:  |
+        [] The Feature is fully implemented (Frontend + Backend)
+        [] Unit and integration tests cover the new logic
+        [] Technical Protocol updated
+        [] Timetracking is recorded and up-to-date
+        [] Readme is up-to-date
