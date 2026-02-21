@@ -1,7 +1,6 @@
 name: Feature
 description: New Feature needed in the Project
-type: Feature
-assignees: []
+assignees: ["feature"]
 body:
   - type: textarea
     id: description
