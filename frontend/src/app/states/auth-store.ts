@@ -1,5 +1,5 @@
 import {Injectable, computed, signal, model} from '@angular/core';
-import {User} from './models/user.models';
+import {User} from '../models/user.model';
 
 @Injectable({providedIn: 'root'})
 export class AuthStore {
@@ -10,17 +10,20 @@ export class AuthStore {
     {id: 3, name: 'Jonas', password: 'password'}
   ]
 
-  // Original states
-  readonly isAuthenticated = signal(false);
+  // Original states (Model)
+  readonly isAuthenticated = signal(true);
   readonly user = signal<User | null>(null);
   readonly error = signal<string | null>(null);
 
-  // Derived states
+  // Derived states (View Model/Computed)
   readonly isAuthenticated$ = computed(() => this.isAuthenticated());
   readonly user$ = computed(() => this.user());
   readonly error$ = computed(() => this.error());
 
-  // Functions
+  /*
+  * Functions
+  * */
+
   logout(): void {
     this.isAuthenticated.set(false);
     this.user.set(null);
@@ -40,7 +43,7 @@ export class AuthStore {
 
   // User should be pre-checked by the function calling this function
   register(user: User): void {
-    this.users.push(user);
+    this.users.push(user); // mock call to backend. TODO: REPLACE IT WITH REAL DB CALL LATER
 
     this.isAuthenticated.set(true);
     this.user.set(user);
