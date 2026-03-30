@@ -38,10 +38,21 @@
       </button>
     </div>
 
-    <button class="btn-expand" (click)="toggleExpanded()" [title]="expanded() ? 'Collapse' : 'Expand'">
-      <!-- Expand icon -->
-      <img src ="icons/down.png" alt="" height="18" width="18" />
-    </button>
+    <div class="action-buttons">
+      <button class="btn-save" (click)="saveTour()">
+        <!-- Save icon -->
+        <img src="icons/save.png" alt="" height="18" width="18" />
+      </button>
+
+      <button class="btn-expand" (click)="toggleExpanded()" [title]="expanded() ? 'Collapse' : 'Expand'">
+        <!-- Expand icon -->
+        @if (expanded()) {
+          <img src ="icons/up.png" alt="" height="18" width="18" />
+        }@else{
+          <img src ="icons/down.png" alt="" height="18" width="18" />
+        }
+      </button>
+    </div>
   </div>
 
   @if (expanded()) {

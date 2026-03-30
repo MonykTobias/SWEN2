@@ -29,4 +29,8 @@ export class NewTourComponent {
   toggleExpanded(): void {
     this.expanded.update(expanded => !expanded);
   }
+
+  saveTour(): void {
+    console.log('Save tour');
+  }
 }

@@ -40,12 +40,15 @@
   justify-content: space-between;
 }
 
-.transport-buttons {
+.transport-buttons,
+.action-buttons{
   display: flex;
   gap: 0.4rem;
 }
 
-.btn-icon {
+.btn-icon,
+.btn-expand,
+.btn-save{
   display: flex;
   align-items: center;
   justify-content: center;
@@ -59,24 +62,9 @@
   color: #334155;
 }
 
-.btn-icon:hover {
-  background: #e2e8f0;
-}
-
-.btn-expand {
-  display: flex;
-  align-items: center;
-  justify-content: center;
-  width: 34px;
-  height: 34px;
-  border: 1px solid #cbd5e1;
-  border-radius: 6px;
-  background: #f8fafc;
-  cursor: pointer;
-  color: #334155;
-}
-
-.btn-expand:hover {
+.btn-icon:hover,
+.btn-expand:hover,
+.btn-save:hover{
   background: #e2e8f0;
 }
 
