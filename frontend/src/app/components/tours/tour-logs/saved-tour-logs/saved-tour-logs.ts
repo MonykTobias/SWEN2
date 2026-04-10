@@ -8,6 +8,7 @@ import {Difficulty} from '../../../../models/tour-log.model';
   imports: [],
   templateUrl: './saved-tour-logs.html',
   styleUrl: './saved-tour-logs.css',
+  standalone: true
 })
 export class SavedTourLogs {
   tourLogsStore = inject(TourLogsStore);

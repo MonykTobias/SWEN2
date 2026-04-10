@@ -44,6 +44,11 @@
   padding-top: 0.75rem;
 }
 
+.field-group{
+  display: flex;
+  flex-direction: row;
+}
+
 .field {
   display: flex;
   flex-direction: column;
@@ -68,14 +73,6 @@
   padding: 0.5rem;
 }
 
-.buttons {
-  display: flex;
-  flex-direction: row;
-  justify-content: flex-start;
-  gap: 10px;
-  margin-top: 10px;
-}
-
 .buttons button{
   background: #f8fafc;
   border: 1px solid #cbd5e1;
@@ -86,4 +83,16 @@
 
 .buttons button:hover{
   background: #e2e8f0;
+}
+
+.right{
+  display: flex;
+  flex-direction: row;
+  gap: 10px;
+  margin-left: auto;
+}
+.left{
+  display: flex;
+  flex-direction: row;
+  gap: 10px;
 }

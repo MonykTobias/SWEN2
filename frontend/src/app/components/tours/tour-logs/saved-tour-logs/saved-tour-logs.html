@@ -4,16 +4,14 @@
          [class.active]="activeTourLogId() === tourLog.id"
          (click)="selectTourLog(tourLog.id)">
       <div class="actions-row">
+        <span>{{tourLog.date.getDay()}}/{{tourLog.date.getMonth()}}/{{tourLog.date.getFullYear()}}</span>
 
-            <span>{{tourLog.date.getDay()}}/{{tourLog.date.getMonth()}}/{{tourLog.date.getFullYear()}}</span>
-        <div class="buttons">
-            @if(tourLog.rating === 1) {
-             1<img src="icons/star.png" alt="" height="18" width="18"/>
-            }
-            @else if(tourLog.rating === 2) {
+        <div class="right">
+          @if(tourLog.rating === 1) {
+              1<img src="icons/star.png" alt="" height="18" width="18"/>
+            }@else if(tourLog.rating === 2) {
               2<img src="icons/star.png" alt="" height="18" width="18"/>
-            }
-            @else if(tourLog.rating === 3) {
+            }@else if(tourLog.rating === 3) {
               3<img src="icons/star.png" alt="" height="18" width="18"/>
             }@else if(tourLog.rating === 4) {
               4<img src="icons/star.png" alt="" height="18" width="18"/>
@@ -28,13 +26,29 @@
             } @else if (tourLog.difficulty === Difficulty.Hard) {
               <img src="icons/red_circle.png" alt="" height="18" width="18">
             }
-        </div>
+          </div>
       </div>
       @if(activeTourLogId() === tourLog.id) {
       <div class="extra-fields">
+        <div class="field-group">
+          <div class="field ">
+            <label>Duration</label>
+            <span>{{tourLog.totalTime}} minutes</span>
+          </div>
+          <div class="field right">
+            {{Difficulty[tourLog.difficulty]}}
+          </div>
+        </div>
         <div class="field">
-          <label>Duration</label>
-          <span>{{tourLog.totalTime}} minutes</span>
+          <label>Distance</label>
+          <span>{{tourLog.totalDistance}} km</span>
+        </div>
+        <div class="field">
+          <label>Description</label>
+          <span>{{tourLog.comment}}</span>
+        </div>
+        <div class="buttons">
+          <button (click)="editTourLog(tourLog.id)">Edit</button>
         </div>
       </div>
       }

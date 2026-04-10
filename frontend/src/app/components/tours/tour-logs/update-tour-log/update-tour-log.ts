@@ -13,6 +13,7 @@ import {Difficulty, Rating, TourLog} from '../../../../models/tour-log.model';
   ],
   templateUrl: './update-tour-log.html',
   styleUrl: './update-tour-log.css',
+  standalone: true
 })
 export class UpdateTourLog {
 
@@ -55,7 +56,7 @@ export class UpdateTourLog {
     comment: new FormControl(''),
   })
 
-  ngOnInit(): void{
+  constructor(){
     const activeTourId: number | null = this.tourMetaStore.selectedId();
     const activeLogId: number | null = this.tourLogsMetaStore.selectedLogId();
 
