@@ -128,6 +128,8 @@ export class UpdateTourLogComponent {
           console.error("Error! no active tour or log");
           break;
       }
+    }else{
+      this.message.set('Please fill in all fields!');
     }
   }
 
