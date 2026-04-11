@@ -16,4 +16,14 @@
       }
     </select>
   </div>
+  <div class="field">
+    <label>Rating</label>
+    <select formControlName="rating"
+    [class.error]="errors().includes( 'rating')"
+    [class.correct]="corrects().includes( 'rating')">
+      @for(rating of ratingOptions; track rating.value){
+        <option [value]="rating.value">{{rating.label}}</option>
+      }
+    </select>
+  </div>
 </div>

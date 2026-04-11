@@ -58,23 +58,28 @@ export class UpdateTourLogComponent {
   })
 
   constructor(route: ActivatedRoute){
-    this.logId = Number(route.snapshot.params['id']);
-
-    // Edit Mode
-    if(this.logId){
-      const activeLog: TourLog | undefined = this.tourLogsStore.getTourLogById(this.logId);
-      if(activeLog){
-        this.toursId = activeLog.tourId;
-        this.tourLogForm.patchValue(activeLog);
-        this.mode.set('edit');
-      }
-    // Error! no active tour or log (No tour for reference!)
-    }else if(!this.toursId || !this.logId){
-      console.error("Error! no active tour or log");
-      this.router.navigate(['/tours']);
-      // Create Mode
-    }else{
+    // determine mode from params
+    if(route.snapshot.params['tourId']){
       this.mode.set('create');
+    }else if(route.snapshot.params['logId']){
+      this.mode.set('edit');
+    }
+
+    switch (this.mode()) {
+      case 'edit':
+        this.logId = Number(route.snapshot.params['logId']);
+        const activeLog: TourLog | undefined = this.tourLogsStore.getTourLogById(this.logId);
+        if(activeLog){
+          this.toursId = activeLog.tourId;
+          this.tourLogForm.patchValue(activeLog);
+        }
+        break;
+        case 'create':
+          this.toursId = Number(route.snapshot.params['tourId']);
+          break;
+        default:
+          console.error("Error! no active tour or log");
+          this.router.navigate(['/tours']);
     }
   }
 
@@ -141,7 +146,6 @@ export class UpdateTourLogComponent {
 
   back(){
     if(this.toursId){
-      console.log(this.toursId)
       this.router.navigate(['/tours','tourlogs', this.toursId]);
     }else{
       console.error("Error! no active tour");
