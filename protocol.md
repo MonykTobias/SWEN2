@@ -2,6 +2,8 @@
 
 This document provides a summary of the technical decisions, features, and UI-flow for the TourPlanner project.
 
+https://github.com/SWEN2-Routenplaner/SWEN2
+
 ## Technical Steps and Decisions
 
 ### Architecture & Frameworks
