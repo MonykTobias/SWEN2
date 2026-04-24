@@ -1,7 +1,9 @@
 <div class="tours-layout">
 
   <mat-card class="tours-sidebar desktop-only">
-    <router-outlet></router-outlet>
+    <div class="sidebar-scroll-container">
+      <router-outlet></router-outlet>
+    </div>
   </mat-card>
 
   <div class="map">
@@ -16,13 +18,16 @@
   [breakpoints]="breakpoints"
   [initialBreakpoint]="initialBreakpoint"
   [handle]="true"
+  [expandToScroll]="false"
   [showBackdrop]="false"
   [backdropDismiss]="false"
+  [canDismiss]="false"
   [focusTrap]="false"
   (ionModalDidDismiss)="handleModalDismiss()"
 >
   <ng-template>
-    <ion-content scroll-y="false">
+    <div (click)="toggleBreakpoint()" style="height: 16px; background: white; flex-shrink: 0; border-radius: 25px 25px 0 0; cursor: pointer;"></div>
+    <ion-content>
       <div class="router-wrapper">
         <router-outlet></router-outlet>
       </div>

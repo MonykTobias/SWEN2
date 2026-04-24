@@ -21,16 +21,16 @@
   display: flex;
   align-items: center;
   background: white;
-  padding: 4px 8px;
-  padding-left: 16px;
+  padding: 4px 8px 4px 16px;
   border-radius: 25px;
-  width: 350px;
+  width: 500px;
   height: 40px; /* Explicitly set to match button */
   box-sizing: border-box;
 }
 
 ::ng-deep .maps-search .mat-mdc-form-field-subscript-wrapper {
   display: none;
+
 }
 
 .menu-toggle {
@@ -54,7 +54,6 @@ button {
   justify-content: center;
 }
 
-/* Override Angular Material MDC icon button internal constraints */
 ::ng-deep .account-icon-button.mat-mdc-icon-button {
   --mdc-icon-button-state-layer-size: 40px !important;
   width: 40px !important;
@@ -76,7 +75,7 @@ button {
   }
 
   .input-container {
-    padding-left: 8px;
+    width: 350px;
   }
 
   .menu-toggle {

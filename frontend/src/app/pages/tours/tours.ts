@@ -15,8 +15,8 @@ export class ToursPage implements AfterViewInit {
   @ViewChild(IonModal) modal!: IonModal;
   isModalOpen = signal(false);
 
-  readonly breakpoints = [0, 0.25, 0.5, 0.8];
-  readonly initialBreakpoint = 0.25;
+  readonly breakpoints = [0.02, 0.3, 0.95];
+  readonly initialBreakpoint = this.breakpoints[0];
 
   @HostListener('window:resize')
   onResize() {
@@ -51,5 +51,15 @@ export class ToursPage implements AfterViewInit {
 
   handleModalDismiss() {
     this.isModalOpen.set(false);
+  }
+
+  toggleBreakpoint() {
+    this.modal.getCurrentBreakpoint().then(current => {
+      if (current && current <= this.breakpoints[0]) {
+        this.modal.setCurrentBreakpoint(this.breakpoints[1]);
+      } else {
+        this.modal.setCurrentBreakpoint(this.breakpoints[0]);
+      }
+    });
   }
 }
