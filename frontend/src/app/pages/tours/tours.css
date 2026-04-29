@@ -1,0 +1,63 @@
+.tours-layout {
+  display: flex;
+  height: 100vh;
+  width: 100vw;
+}
+
+.tours-sidebar {
+  position: absolute;
+  top: 50px;
+  margin: 10px;
+  width: 400px;
+  height: calc(100vh - 70px);
+  border-radius: 25px;
+  background: white;
+  z-index: 1010;
+  overflow: hidden; /* Ensure nothing breaks the rounded corners */
+}
+
+.sidebar-scroll-container {
+  height: 100%;
+  overflow-y: auto;
+  padding: 0 16px;
+}
+
+.sidebar-scroll-container::-webkit-scrollbar-button {
+  display: none;
+  width: 0;
+  height: 0;
+}
+
+.map {
+  flex: 1;
+  width: 100%;
+  height: 100%;
+}
+
+map {
+  display: block;
+  width: 100%;
+  height: 100%;
+  position: relative;
+}
+
+.router-wrapper {
+  display: flex;
+  flex-direction: column;
+}
+
+ion-modal::part(content) {
+  border-radius: 25px 25px 0 0;
+  overflow: hidden;
+}
+
+@media (max-width: 768px) {
+  .tours-layout {
+    flex-direction: column;
+  }
+
+  .map {
+    height: 100%;
+    width: 100%;
+  }
+}

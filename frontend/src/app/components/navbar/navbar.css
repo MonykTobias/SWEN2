@@ -1,137 +1,63 @@
-.header {
+.navbar-container {
+  position: absolute;
+  top: 0;
+  left: 0;
+  right: 0;
+  z-index: 1100;
   display: flex;
   justify-content: space-between;
   align-items: center;
-  padding: 0 1.5rem;
-  height: 60px;
-  background-color: #1e293b;
-  color: #f1f5f9;
-  position: relative;
-  z-index: 1000;
+  margin: 10px;
 }
 
-.logo a {
-  font-size: 1.5rem;
-  font-weight: 700;
-  text-decoration: none;
-  color: #f1f5f9;
+.input-field {
+  flex: 1;
+  border: none;
+  outline: none; /* Removes the blue ring when clicking */
+  font-size: 16px;
+  height: 32px;
+}
+.input-container {
   display: flex;
   align-items: center;
-  transition: color 0.2s ease;
-
-  &:hover {
-    color: #38bdf8;
-  }
+  background: white;
+  padding: 4px 8px 4px 16px;
+  border-radius: 25px;
+  width: 500px;
+  height: 40px; /* Explicitly set to match button */
+  box-sizing: border-box;
 }
 
-.desktop-nav {
-  display: flex;
+button {
+  background: white;
+}
+
+.account-icon-button {
+  background: white !important;
+  width: 40px !important;
+  height: 40px !important;
+  min-width: 40px !important;
+  min-height: 40px !important;
+  padding: 0 !important;
+  border-radius: 50% !important;
+  display: flex !important;
   align-items: center;
-  gap: 1.5rem;
-
-  a {
-    color: #f1f5f9;
-    text-decoration: none;
-    font-size: 0.95rem;
-    transition: color 0.2s ease;
-
-    &:hover, &:focus {
-      color: #38bdf8;
-    }
-  }
+  justify-content: center;
 }
 
-.menu-toggle {
-  display: none;
-  flex-direction: column;
-  gap: 5px;
-  background: transparent;
-  border: none;
-  cursor: pointer;
-  padding: 0.25rem;
-
-  .bar {
-    width: 25px;
-    height: 3px;
-    background-color: #f1f5f9;
-    border-radius: 2px;
-    transition: background-color 0.3s ease;
-  }
-
-  &:hover .bar {
-    background-color: #38bdf8;
-  }
+::ng-deep .account-icon-button.mat-mdc-icon-button {
+  --mdc-icon-button-state-layer-size: 40px !important;
+  width: 40px !important;
+  height: 40px !important;
 }
 
-.mobile-nav {
-  display: none;
-}
-
-.btn {
-  padding: 0.35rem 0.9rem;
-  border-radius: 6px;
-  font-size: 0.9rem;
-  cursor: pointer;
-  text-decoration: none;
-  border: none;
-  transition: background-color 0.2s ease;
-}
-
-.btn-login {
-  background-color: #38bdf8;
-  color: #0f172a;
-
-  &:hover {
-    background-color: #7dd3fc;
-  }
-}
-
-.btn-register {
-  background-color: #10b981;
-  color: #ffffff;
-}
-
-.btn-logout {
-  background-color: #ef4444;
-  color: #ffffff;
-
-  &:hover {
-    background-color: #f87171;
-  }
+::ng-deep .account-icon-button .mat-mdc-button-touch-target {
+  width: 40px !important;
+  height: 40px !important;
 }
 
 @media (max-width: 768px) {
-  .desktop-nav, .desktop-search {
-    display: none;
-  }
-
-  .menu-toggle {
-    display: flex;
-  }
-
-  .mobile-nav {
-    display: flex;
-    flex-direction: column;
-    position: absolute;
-    top: 60px;
-    left: 0;
-    right: 0;
-    background-color: #1e293b;
-    padding: 1.5rem;
-    gap: 1.5rem;
-    box-shadow: 0 8px 16px rgba(0, 0, 0, 0.2);
-    border-top: 1px solid rgba(255, 255, 255, 0.1);
-
-    a {
-      color: #f1f5f9;
-      text-decoration: none;
-      font-size: 1.1rem;
-      width: 100%;
-      transition: color 0.2s ease;
-
-      &:hover {
-        color: #38bdf8;
-      }
-    }
+  .input-container {
+    width: 350px;
   }
 }
